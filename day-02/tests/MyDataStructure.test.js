@@ -53,7 +53,7 @@ describe('Stack', () => {
 });
 
 describe('Queue', () => {
-  it.only('should add item to the end of the queue, remove item from the front of the queue, and return the next item to be removed', () => {
+  it('should add item to the end of the queue, remove item from the front of the queue, and return the next item to be removed', () => {
     const queue = new Queue();
 
     queue.enqueue('fox');
@@ -61,7 +61,7 @@ describe('Queue', () => {
     queue.enqueue('lizard');
     expect(queue.queue).toEqual(['fox', 'goose', 'lizard']);
 
-    expect(queue.hasNext).toBe(true);
+    expect(queue.hasNext()).toBe(true);
 
     queue.dequeue();
     expect(queue.queue).toEqual(['goose', 'lizard']);
