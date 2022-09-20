@@ -26,30 +26,27 @@ describe('Stack', () => {
     stack.push('fox');
     stack.push('goose');
     stack.push('lizard');
-    expect(stack).toEqual('fox', 'goose', 'lizard');
+    expect(stack.list).toEqual(['fox', 'goose', 'lizard']);
     
-    const pop = stack.pop();
-    expect(pop).toBe('lizard');
+    stack.pop();
+    expect(stack.list).toEqual(['fox', 'goose']);
 
     const peek = stack.peek();
     expect(peek).toBe('goose');
 
-    const pop2 = stack.pop();
-    expect(pop2).toBe('goose');
+    stack.pop();
+    expect(stack.list).toEqual(['fox']);
 
-    const push = stack.push('llama');
-    expect(push).toBe('llama');
+    stack.push('llama');
+    expect(stack.list).toEqual(['fox', 'llama']);
 
-    const pop3 = stack.pop();
-    expect(pop3).toBe('llama');
+    stack.pop();
+    expect(stack.list).toEqual(['fox']);
 
     const peek2 = stack.peek();
-    expect(peek2).toBe('fox');
+    expect(peek2).toEqual('fox');
 
-    const pop4 = stack.pop();
-    expect(pop4).toBe('fox');
-
-    const pop5 = stack.pop();
-    expect(pop5).toBe(null);
+    stack.pop();
+    expect(stack.list).toEqual([]);
   });
 });
