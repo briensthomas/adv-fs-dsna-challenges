@@ -111,6 +111,7 @@ function repeat(txt, n) {
   }
 
   if (newTxt.length < n) {
+    newTxt.push(txt);
     return repeat(newTxt, n);
   }
 
@@ -118,7 +119,12 @@ function repeat(txt, n) {
 }
 
 function fib(n) {
-
+  // this is the break statement which ends the recursion
+  if (n < 2) {
+    return n;
+  } else {
+    return fib(n - 2) + fib(n - 1);
+  }
 }
 
 module.exports = { reverseSentence, titleCase, oddishOrEvenish, 
