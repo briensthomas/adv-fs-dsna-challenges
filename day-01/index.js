@@ -36,7 +36,14 @@ function at(arr, index) {
 }
 
 function anagrams(wordOne, wordTwo) {
+  const splitOne = wordOne.split('').sort().join('');
+  const splitTwo = wordTwo.split('').sort().join('');
 
+  if (splitOne === splitTwo) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 
