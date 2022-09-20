@@ -1,5 +1,5 @@
-function reverseSentence(str) {
-  return str
+function reverseSentence(string) {
+  return string
     .split(' ')
     .map((word) => word.split('').reverse().join(''))
     .join(' ');
@@ -74,7 +74,14 @@ function multiplesOfN(n) {
   return numArray;
 }
 
+function addPunctuation(punctuation) {
+  return function someString(string) {
+    return string + punctuation;
+  };
+  
+}
+
 module.exports = { reverseSentence, titleCase, oddishOrEvenish, at, anagrams,
-  fizzBuzz, multiplesOfN };
+  fizzBuzz, multiplesOfN, addPunctuation };
 
 

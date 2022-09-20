@@ -1,5 +1,5 @@
 const { reverseSentence, titleCase, oddishOrEvenish, at, anagrams,
-  fizzBuzz, multiplesOfN } = require('./index');
+  fizzBuzz, multiplesOfN, addPunctuation } = require('./day01');
 
 describe('primitive code challenges', () => {
   describe('reverseSentence', () => {
@@ -58,6 +58,19 @@ describe('primitive code challenges', () => {
       expect(multiplesOfN(5)).toEqual([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
       expect(multiplesOfN(25)).toEqual([25, 50]);
       expect(multiplesOfN(75)).toEqual([]);
+    });
+  });
+
+  describe('addPunctuation', () => {
+    it('should add input punctuation to the end of input sentence', () => {
+      const addExcitement = addPunctuation('!!!');
+      const addUnsure = addPunctuation('?!?!');
+
+      expect(addExcitement('Hello World')).toBe('Hello World!!!');
+      expect(addExcitement('Pokemon, catch em all')).toBe('Pokemon, catch em all!!!');
+
+      expect(addUnsure('Hello World')).toBe('Hello World?!?!');
+      expect(addUnsure('Pokemon, catch em all')).toBe('Pokemon, catch em all?!?!');
     });
   });
 });
