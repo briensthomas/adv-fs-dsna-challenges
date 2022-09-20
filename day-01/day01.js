@@ -117,7 +117,12 @@ function repeat(txt, n) {
   return newTxt.join('');
 }
 
-module.exports = { reverseSentence, titleCase, oddishOrEvenish, at, anagrams,
-  fizzBuzz, multiplesOfN, addPunctuation, addFirst, rootDigit, repeat };
+function fib(n) {
+
+}
+
+module.exports = { reverseSentence, titleCase, oddishOrEvenish, 
+  at, anagrams, fizzBuzz, multiplesOfN, addPunctuation, 
+  addFirst, rootDigit, repeat, fib };
 
 
