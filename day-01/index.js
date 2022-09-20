@@ -46,7 +46,11 @@ function anagrams(wordOne, wordTwo) {
   }
 }
 
+function fizzBuzz(number) {
+  
+}
 
-module.exports = { reverseSentence, titleCase, oddishOrEvenish, at, anagrams };
+module.exports = { reverseSentence, titleCase, oddishOrEvenish, at, anagrams,
+  fizzBuzz };
 
 

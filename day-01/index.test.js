@@ -1,4 +1,5 @@
-const { reverseSentence, titleCase, oddishOrEvenish, at, anagrams } = require('./index');
+const { reverseSentence, titleCase, oddishOrEvenish, at, anagrams,
+  fizzBuzz } = require('./index');
 
 describe('primitive code challenges', () => {
   describe('reverseSentence', () => {
@@ -34,6 +35,20 @@ describe('primitive code challenges', () => {
     it('should return true if the words are anagrams', () => {
       expect(anagrams('superintended', 'unpredestined')).toBe(true);
       expect(anagrams('pictorialness', 'documentarily')).toBe(false);
+    });
+  });
+
+  describe('fizz-buzz', () => {
+    it('prints fizz if divisible by 3, buzz for numbers divisible by 5, fizzbuzz for both', () => {
+      
+      expect(fizzBuzz(16)).toEqual(
+        [
+          1, 2, 'Fizz', 4, 'Buzz', 
+          'Fizz', 7, 8, 'Fizz', 'Buzz', 
+          11, 'Fizz', 13, 14, 'FizzBuzz', 
+          16
+        ]
+      );
     });
   });
 });
