@@ -63,7 +63,15 @@ function fizzBuzz(number) {
 }
 
 function multiplesOfN(n) {
-  
+  const numArray = [];
+  for (let i = 1; n <= 50; i++) {
+    const multiple = i * n;
+    if (i * n > 50) {
+      break;
+    }
+    numArray.push(multiple);
+  }
+  return numArray;
 }
 
 module.exports = { reverseSentence, titleCase, oddishOrEvenish, at, anagrams,
