@@ -1,5 +1,5 @@
 const { reverseSentence, titleCase, oddishOrEvenish, at, anagrams,
-  fizzBuzz } = require('./index');
+  fizzBuzz, multiplesOfN } = require('./index');
 
 describe('primitive code challenges', () => {
   describe('reverseSentence', () => {
@@ -49,6 +49,15 @@ describe('primitive code challenges', () => {
           16
         ]
       );
+    });
+  });
+
+  describe('multiplesOfN', () => {
+    it('multiplies the input up to a product of 50', () => {
+      
+      expect(multiplesOfN(5)).toEqual([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
+      expect(multiplesOfN(25)).toEqual([25, 50]);
+      expect(multiplesOfN(75)).toEqual([]);
     });
   });
 });

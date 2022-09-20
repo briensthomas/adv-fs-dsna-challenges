@@ -62,7 +62,11 @@ function fizzBuzz(number) {
   return numArray;
 }
 
+function multiplesOfN(n) {
+  
+}
+
 module.exports = { reverseSentence, titleCase, oddishOrEvenish, at, anagrams,
-  fizzBuzz };
+  fizzBuzz, multiplesOfN };
 
 
