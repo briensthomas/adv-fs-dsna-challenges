@@ -59,7 +59,6 @@ function fizzBuzz(number) {
       numArray.push(i);
     }
   }
-  console.log('numArray', numArray);
   return numArray;
 }
 
