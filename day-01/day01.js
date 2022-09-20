@@ -78,10 +78,21 @@ function addPunctuation(punctuation) {
   return function someString(string) {
     return string + punctuation;
   };
-  
+}
+
+function addFirst(element) {
+  const newArr = [];
+  return function oldArr(arr) {
+    newArr.push(element, ...arr);
+    return newArr;
+  };
+}
+
+function rootDigit(n) {
+
 }
 
 module.exports = { reverseSentence, titleCase, oddishOrEvenish, at, anagrams,
-  fizzBuzz, multiplesOfN, addPunctuation };
+  fizzBuzz, multiplesOfN, addPunctuation, addFirst, rootDigit };
 
 

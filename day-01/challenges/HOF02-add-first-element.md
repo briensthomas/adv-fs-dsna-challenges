@@ -17,9 +17,9 @@ console.log(addOrange(['blue', 'blue', 'blue']));
 // [orange,blue,blue,blue]
 
 const addCat = addFirst('cat');
-console.log(addOrange(['dog', 'bird', 'lizard']));
+console.log(addCat(['dog', 'bird', 'lizard']));
 // [cat,dog,bird,lizard]
-console.log(addOrange(['lizard', 'donkey', 'whale']));
+console.log(addCat(['lizard', 'donkey', 'whale']));
 // [cat,lizard,donkey,whale]
 
 ```

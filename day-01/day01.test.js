@@ -1,5 +1,5 @@
 const { reverseSentence, titleCase, oddishOrEvenish, at, anagrams,
-  fizzBuzz, multiplesOfN, addPunctuation } = require('./day01');
+  fizzBuzz, multiplesOfN, addPunctuation, addFirst, rootDigit } = require('./day01');
 
 describe('primitive code challenges', () => {
   describe('reverseSentence', () => {
@@ -71,6 +71,26 @@ describe('primitive code challenges', () => {
 
       expect(addUnsure('Hello World')).toBe('Hello World?!?!');
       expect(addUnsure('Pokemon, catch em all')).toBe('Pokemon, catch em all?!?!');
+    });
+  });
+
+  describe('addFirst', () => {
+    it('should take an element, and an array, and push the element and the array to a new array', () => {
+
+      expect(addFirst('orange')(['red', 'blue', 'green'])).toEqual(['orange', 'red', 'blue', 'green']);
+      expect(addFirst('orange')(['blue', 'blue', 'blue'])).toEqual(['orange', 'blue', 'blue', 'blue']);
+
+      expect(addFirst('cat')(['dog', 'bird', 'lizard'])).toEqual(['cat', 'dog', 'bird', 'lizard']);
+      expect(addFirst('cat')(['lizard', 'donkey', 'whale'])).toEqual(['cat', 'lizard', 'donkey', 'whale']);
+    });
+  });
+
+  describe('rootDigit', () => {
+    it('takes a number and returns the sum of all digits in the number', () => {
+
+      expect(rootDigit(123)).toBe('6');
+      expect(rootDigit(4322)).toBe('2');
+      expect(rootDigit(999888777)).toBe('9');
     });
   });
 });
