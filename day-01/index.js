@@ -29,13 +29,9 @@ function oddishOrEvenish(number) {
 
 function at(arr, index) {
   if (index >= 0) {
-    const item = arr[index];
-    console.log('item', item);
-    return item;
+    return arr[index];
   } else {
-    const item2 = arr[arr.length + index];
-    console.log('item2', item2);
-    return item2;
+    return arr[arr.length + index];
   }
 }
 module.exports = { reverseSentence, titleCase, oddishOrEvenish, at };
