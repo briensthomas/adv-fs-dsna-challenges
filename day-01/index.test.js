@@ -1,4 +1,4 @@
-const { reverseSentence, titleCase, oddishOrEvenish, at } = require('./index');
+const { reverseSentence, titleCase, oddishOrEvenish, at, anagrams } = require('./index');
 
 describe('primitive code challenges', () => {
   describe('reverseSentence', () => {
@@ -24,8 +24,16 @@ describe('primitive code challenges', () => {
     it('should return the value of the array at the specified index', () => {
       const array1 = at(['a', 'b', 'c', 'd', 'e'], 1);
       const array2 = at(['a', 'b', 'c', 'd', 'e'], - 2);
+
       expect(array1).toBe('b');
       expect(array2).toBe('d');
+    });
+  });
+
+  describe('anagrams', () => {
+    it('should return true if the words are anagrams', () => {
+      expect(anagrams('superintended', 'unpredestined')).toBe(true);
+      expect(anagrams('pictorialness', 'documentarily')).toBe(false);
     });
   });
 });

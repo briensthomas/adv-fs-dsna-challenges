@@ -34,6 +34,12 @@ function at(arr, index) {
     return arr[arr.length + index];
   }
 }
-module.exports = { reverseSentence, titleCase, oddishOrEvenish, at };
+
+function anagrams(wordOne, wordTwo) {
+
+}
+
+
+module.exports = { reverseSentence, titleCase, oddishOrEvenish, at, anagrams };
 
 
