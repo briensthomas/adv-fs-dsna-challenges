@@ -102,9 +102,22 @@ function rootDigit(n) {
 
   return sum.toString();
 }
-// small change because I forgot to checkout to Dev
+
+function repeat(txt, n) {
+  const newTxt = [];
+
+  for (let i = 0; newTxt.length < n; i++) {
+    newTxt.push(txt);
+  }
+
+  if (newTxt.length < n) {
+    return repeat(newTxt, n);
+  }
+
+  return newTxt.join('');
+}
 
 module.exports = { reverseSentence, titleCase, oddishOrEvenish, at, anagrams,
-  fizzBuzz, multiplesOfN, addPunctuation, addFirst, rootDigit };
+  fizzBuzz, multiplesOfN, addPunctuation, addFirst, rootDigit, repeat };
 
 

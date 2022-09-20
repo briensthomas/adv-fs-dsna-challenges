@@ -1,5 +1,5 @@
 const { reverseSentence, titleCase, oddishOrEvenish, at, anagrams,
-  fizzBuzz, multiplesOfN, addPunctuation, addFirst, rootDigit } = require('./day01');
+  fizzBuzz, multiplesOfN, addPunctuation, addFirst, rootDigit, repeat } = require('./day01');
 
 describe('primitive code challenges', () => {
   describe('reverseSentence', () => {
@@ -91,6 +91,15 @@ describe('primitive code challenges', () => {
       expect(rootDigit(123)).toBe('6');
       expect(rootDigit(4322)).toBe('2');
       expect(rootDigit(999888777)).toBe('9');
+    });
+  });
+
+  describe('repeat', () => {
+    it('repeats a string, n amount of times', () => {
+      
+      expect(repeat('ab', 3)).toBe('ababab');
+      expect(repeat('kiwi', 1)).toBe('kiwi');
+      expect(repeat('cherry', 2)).toBe('cherrycherry');
     });
   });
 });
