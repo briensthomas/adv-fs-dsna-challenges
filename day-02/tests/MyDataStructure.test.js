@@ -1,4 +1,5 @@
 const { MyDataStructure } = require('../MyDataStructure.js');
+const { Queue } = require('../Queue.js');
 const { Stack } = require('../Stack.js');
 
 describe('MyDataStructure', () => {
@@ -48,5 +49,35 @@ describe('Stack', () => {
 
     stack.pop();
     expect(stack.list).toEqual([]);
+  });
+});
+
+describe('Queue', () => {
+  it.only('should add item to the end of the queue, remove item from the front of the queue, and return the next item to be removed', () => {
+    const queue = new Queue();
+
+    queue.enqueue('fox');
+    queue.enqueue('goose');
+    queue.enqueue('lizard');
+    expect(queue.queue).toEqual(['fox', 'goose', 'lizard']);
+
+    expect(queue.hasNext).toBe(true);
+
+    queue.dequeue();
+    expect(queue.queue).toEqual(['goose', 'lizard']);
+
+    queue.dequeue();
+    expect(queue.queue).toEqual(['lizard']);
+    queue.enqueue('llama');
+    expect(queue.queue).toEqual(['lizard', 'llama']);
+
+    queue.dequeue();
+    expect(queue.queue).toEqual(['llama']);
+
+    expect(queue.hasNext()).toBe(true);
+    queue.dequeue();
+    expect(queue.hasNext()).toBe(false);
+
+    expect(queue.dequeue()).toBe(null);
   });
 });
