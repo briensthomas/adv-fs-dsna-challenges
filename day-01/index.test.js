@@ -22,8 +22,10 @@ describe('primitive code challenges', () => {
 
   describe('at', () => {
     it('should return the value of the array at the specified index', () => {
-      expect(at['a', 'b', 'c', 'd', 'e'], 1).toBe('b');
-      expect(at['a', 'b', 'c', 'd', 'e'], - 2).toBe('d');
+      const array1 = at(['a', 'b', 'c', 'd', 'e'], 1);
+      const array2 = at(['a', 'b', 'c', 'd', 'e'], - 2);
+      expect(array1).toBe('b');
+      expect(array2).toBe('d');
     });
   });
 });

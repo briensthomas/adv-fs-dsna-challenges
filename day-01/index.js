@@ -16,7 +16,6 @@ function titleCase(sentence) {
 function oddishOrEvenish(number) {
   const a = number
     .toString();
-  console.log(a);
   let b = 0;
   for (let i = 0; i < a.length; i++) {
     b += parseInt(a[i]);
@@ -29,6 +28,16 @@ function oddishOrEvenish(number) {
 }
 
 function at(arr, index) {
-  
+  if (index >= 0) {
+    const item = arr[index];
+    console.log('item', item);
+    return item;
+  } else {
+    const item2 = arr[arr.length + index];
+    console.log('item2', item2);
+    return item2;
+  }
 }
 module.exports = { reverseSentence, titleCase, oddishOrEvenish, at };
+
+
