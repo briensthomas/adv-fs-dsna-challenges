@@ -89,7 +89,18 @@ function addFirst(element) {
 }
 
 function rootDigit(n) {
+  const str = n.toString();
+  let sum = 0;
 
+  for (let i = 0; i < str.length; i++) {
+    sum += parseInt(str[i]);
+  }
+
+  if (sum > 9) {
+    return rootDigit(sum).toString();
+  }
+
+  return sum.toString();
 }
 
 module.exports = { reverseSentence, titleCase, oddishOrEvenish, at, anagrams,
