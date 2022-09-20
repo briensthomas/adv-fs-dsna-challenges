@@ -1,5 +1,6 @@
-const { reverseSentence, titleCase, oddishOrEvenish, at, anagrams,
-  fizzBuzz, multiplesOfN, addPunctuation, addFirst, rootDigit } = require('./day01');
+const { reverseSentence, titleCase, oddishOrEvenish, at, 
+  anagrams, fizzBuzz, multiplesOfN, addPunctuation, addFirst,
+  rootDigit, repeat, fib } = require('./day01');
 
 describe('primitive code challenges', () => {
   describe('reverseSentence', () => {
@@ -93,4 +94,26 @@ describe('primitive code challenges', () => {
       expect(rootDigit(999888777)).toBe('9');
     });
   });
+
+  describe('repeat', () => {
+    it('repeats a string, n amount of times', () => {
+      
+      expect(repeat('ab', 3)).toBe('ababab');
+      expect(repeat('kiwi', 1)).toBe('kiwi');
+      expect(repeat('cherry', 2)).toBe('cherrycherry');
+    });
+  });
+
+  describe('fibonacci', () => {
+    it('runs an array of numbers through the fibonacci sequence', () => {
+      
+      expect(fib(0)).toBe(0);
+      expect(fib(1)).toBe(1);
+      expect(fib(2)).toBe(1);
+      expect(fib(6)).toBe(8);
+      expect(fib(8)).toBe(21);
+    });
+  });
+
+
 });

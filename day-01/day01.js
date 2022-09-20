@@ -103,7 +103,32 @@ function rootDigit(n) {
   return sum.toString();
 }
 
-module.exports = { reverseSentence, titleCase, oddishOrEvenish, at, anagrams,
-  fizzBuzz, multiplesOfN, addPunctuation, addFirst, rootDigit };
+function repeat(txt, n) {
+  const newTxt = [];
+
+  for (let i = 0; newTxt.length < n; i++) {
+    newTxt.push(txt);
+  }
+
+  if (newTxt.length < n) {
+    newTxt.push(txt);
+    return repeat(newTxt, n);
+  }
+
+  return newTxt.join('');
+}
+
+function fib(n) {
+  // this is the break statement which ends the recursion
+  if (n < 2) {
+    return n;
+  } else {
+    return fib(n - 2) + fib(n - 1);
+  }
+}
+
+module.exports = { reverseSentence, titleCase, oddishOrEvenish, 
+  at, anagrams, fizzBuzz, multiplesOfN, addPunctuation, 
+  addFirst, rootDigit, repeat, fib };
 
 
