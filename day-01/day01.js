@@ -102,6 +102,7 @@ function rootDigit(n) {
 
   return sum.toString();
 }
+// small change because I forgot to checkout to Dev
 
 module.exports = { reverseSentence, titleCase, oddishOrEvenish, at, anagrams,
   fizzBuzz, multiplesOfN, addPunctuation, addFirst, rootDigit };
