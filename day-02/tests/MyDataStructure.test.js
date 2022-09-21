@@ -49,6 +49,8 @@ describe('Stack', () => {
 
     stack.pop();
     expect(stack.list).toEqual([]);
+
+    expect(stack.pop()).toBe(null);
   });
 });
 
@@ -79,5 +81,14 @@ describe('Queue', () => {
     expect(queue.hasNext()).toBe(false);
 
     expect(queue.dequeue()).toBe(null);
+  });
+});
+
+describe('Stack reverse array', () => {
+  it('should reverse the input array, and return it', () => {
+    const stack = new Stack();
+    const reverse = stack.reverse([12, 3, 5, 7]);
+    
+    expect(reverse).toEqual([7, 5, 3, 12]);
   });
 });
