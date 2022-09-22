@@ -87,8 +87,7 @@ describe('Queue', () => {
 describe('Stack reverse array', () => {
   it('should reverse the input array, and return it', () => {
     const stack = new Stack();
-    const reverse = stack.reverse([12, 3, 5, 7]);
-    
-    expect(reverse).toEqual([7, 5, 3, 12]);
+
+    expect(stack.reverse([12, 3, 5, 7])).toEqual([7, 5, 3, 12]);
   });
 });
