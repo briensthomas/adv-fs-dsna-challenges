@@ -34,3 +34,22 @@ Binary Trees unlock the power of `logN` (inverse of exponential) operational com
 ## Graphs
 
 Nodes point to any other number of nodes. Think of a social network, friends have friends have friends. Or think of cities connected by roads.
+
+
+"B": {
+    value: B,
+    left: "A": {
+        value: A,
+        left: null,
+        right: null,
+    },
+    right: "D": {
+        value: D,
+        left: "C": {
+            value: C,
+            left: null,
+            right, null
+        },
+        right: null,
+    }
+}
