@@ -20,20 +20,29 @@ describe('node based binary tree', () => {
 
 describe('Person Binary Tree', () => {
   it('should return the person object matching the name', () => {
-    const Jones = new PersonTreeNode('Jones');
-    const Brook = new PersonTreeNode('Brook');
-    const Smith = new PersonTreeNode('Smith');
-    const Nelson = new PersonTreeNode('Nelson');
+    const Jones = new PersonTreeNode({ name: 'Jones' });
+    const Brook = new PersonTreeNode({ name: 'Brook',
+      phone: '111-111-1111',
+      address: '111 Main St' });
+    const Smith = new PersonTreeNode({ name: 'Smith',
+      phone: '222-222-2222',
+      address: '222 Main St' });
+    const Nelson = new PersonTreeNode({ name: 'Nelson',
+      phone: '333-333-3333',
+      address: '333 Main St' });
 
     Jones.add(Brook);
+
     Jones.add(Smith);
     Jones.add(Nelson);
 
-    const person1 = PersonTreeNode.findPerson('Nelson');
+    expect(Jones.findPerson('Nelson')).toEqual({ name: 'Nelson',
+      phone: '333-333-3333',
+      address: '333 Main St' });
 
-    expect(Jones.left.name).toEqual('Brook');
-    expect(Jones.right.name).toEqual('Smith');
-    expect(Jones.right.left.name).toEqual('Nelson');
-    expect(person1).toEqual('Nelson');
+    expect(Jones.left.value).toEqual('Brook');
+    expect(Jones.right.value).toEqual('Smith');
+    expect(Jones.right.left.value).toEqual('Nelson');
+    
   });
 });

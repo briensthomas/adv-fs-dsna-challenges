@@ -38,9 +38,9 @@ class PersonTreeNode {
   
   add(node) {
 
-    if (node.person.name === this.value) {
+    if (node.value === this.value) {
       return null;
-    } if (node.person.name < this.value) {
+    } if (node.value < this.value) {
       //   console.log('node.left', node.left);
       if (this.left == null) {
         this.left = node;
@@ -58,8 +58,21 @@ class PersonTreeNode {
   }
   
   findPerson(name) {
-    // Implement me!
-    
+    if (name === this.value) {
+      return this.person;
+    } if (name < this.value) {
+      if (this.left == null) {
+        return null;
+      } else {
+        return this.left.findPerson(name);
+      }
+    } else {
+      if (this.right == null) {
+        return null;
+      } else {
+        return this.right.findPerson(name);
+      }
+    }
   }
 }
 
